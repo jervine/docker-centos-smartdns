@@ -14,4 +14,8 @@ ADD sniproxy.ini /etc/supervisord.d/sniproxy.ini
 ADD start.sh /usr/sbin/start.sh
 RUN chmod 755 /usr/sbin/start.sh
 
+VOLUME /config
+
+EXPOSE 80 443
+
 ENTRYPOINT ["/usr/sbin/start.sh"]
