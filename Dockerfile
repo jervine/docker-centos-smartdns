@@ -11,6 +11,7 @@ RUN yum install -y sniproxy supervisor; yum clean all
 
 ADD supervisord.conf /etc/supervisord.conf
 ADD sniproxy.ini /etc/supervisord.d/sniproxy.ini
+ADD sniproxy.conf /etc/sniproxy.conf
 ADD start.sh /usr/sbin/start.sh
 RUN chmod 755 /usr/sbin/start.sh
 
